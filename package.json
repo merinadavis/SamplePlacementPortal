@@ -1,0 +1,44 @@
+{
+  "name": "PlacementCell",
+  "version": "1.0.0",
+  "description": "a mern stack app for college placements",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "nodejs",
+    "jwt",
+    "passport",
+    "express"
+  ],
+  "author": "Sathya M, Vijeth P H",
+  "license": "MIT",
+  "dependencies": {
+    "@sweetalert/with-react": "^0.1.1",
+    "axios": "^1.3.3",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.17.2",
+    "classnames": "^2.3.2",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^7.4.2",
+    "jwt-decode": "^3.1.2",
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.15",
+    "nodemon": "^1.18.3",
+    "react-codemirror2": "^7.2.1",
+    "react-helmet": "^6.1.0",
+    "react-player": "^2.11.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1",
+    "react-time-ago": "^6.0.1",
+    "toastify-js": "^1.12.0",
+    "toastr": "^2.1.4"
+  }
+}
