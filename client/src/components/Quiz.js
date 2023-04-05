@@ -4,7 +4,7 @@ import swal from "sweetalert";
 import classnames from "classnames";
 import Toastify from "toastify-js";
 
-//import questions from "../questions.json";
+import questions from "../questions.json";
 import {getQuestions} from './UserFunctions';
 import isEmpty from "../is-empty";
 
@@ -16,7 +16,7 @@ class Quiz extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions:[],
+      questions: questions,
       currentQuestion: {},
       nextQuestion: {},
       previousQuestion: {},

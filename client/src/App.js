@@ -43,16 +43,6 @@ class App extends Component {
             <Route exact path="/quizSummary" component={QuizSummary} />
             <Route exact path="/discussion" component={Forum} />
           </div>
-          {/* <footer
-            className="text-muted text-center bg-dark py-4"
-            style={footerStyles}
-          >
-            <div className="container">
-              <span className="text-white">
-                Developed By Sathya M and Vijeth P H
-              </span>
-            </div>
-          </footer> */}
         </div>
       </Router>
     );
