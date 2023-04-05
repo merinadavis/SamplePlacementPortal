@@ -57,6 +57,10 @@ export default class IDE extends Component {
     //boddy.append('lang', 'PYTHON3');
     //boddy.append("source", this.state.code);
     //boddy.append("callback", "https://336a7eef90c3.ngrok.io/codehook");
+    boddy.append("client_secret", "ed791c0f80770b6864d094172177879170e7d7fa");
+    boddy.append('lang', 'PYTHON3');
+    boddy.append("source", this.state.code);
+    boddy.append("callback", "https://336a7eef90c3.ngrok.io/codehook");
 
     postBody["source"] = this.state.code;
     postBody["callback"] = window.location.origin + "/codehook";
@@ -96,7 +100,7 @@ export default class IDE extends Component {
         console.log(response);
       });
 
-    /*
+      //commented 
    fetch('https://api.hackerearth.com/v3/code/compile/',{
             method:'POST',
             body: JSON.stringify({
@@ -112,8 +116,7 @@ export default class IDE extends Component {
       }).then((response) => response.json())
           .then(function(data) { console.log(data); })
           .catch((error) => console.log(error));
-      */
-    // console.log(this.state.code);
+    console.log(this.state.code);
   }
 
   runCode() {
@@ -143,10 +146,11 @@ export default class IDE extends Component {
       //boddy.set("input", this.state.inputthings);
     }
 
-    //boddy.append("client_secret", process.env.REACT_APP_HACKEREARTH_API_KEY);
-    //boddy.append('lang', 'PYTHON3');
-    //boddy.append("source", this.state.code);
-    //boddy.append("callback", "https://336a7eef90c3.ngrok.io/codehook");
+    //commented
+    boddy.append("client_secret", "ed791c0f80770b6864d094172177879170e7d7fa");
+    boddy.append('lang', 'PYTHON3');
+    boddy.append("source", this.state.code);
+    boddy.append("callback", "https://336a7eef90c3.ngrok.io/codehook");
 
     postBody["source"] = this.state.code;
     postBody["callback"] = window.location.origin + "/codehook";

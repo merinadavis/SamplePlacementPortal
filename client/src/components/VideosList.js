@@ -10,8 +10,8 @@ class VideosList extends Component {
       videos: [],
       currentVideo: {
         topic: "Quantitative Aptitude",
-        subtopic: "Simple Interest and Compound Interest",
-        link: "https://youtu.be/E3lJmCwUWZE"
+        subtopic: "Time and Work problems",
+        link: "https://youtu.be/KE7tQf9spPg"
       }
     }
   }

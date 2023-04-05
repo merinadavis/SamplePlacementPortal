@@ -27,7 +27,9 @@ app.use(
 );
 
 // const mongoURI = process.env.MONGO_URI;
-const mongoURI = "mongodb://localhost:27017";
+// const mongoURI = "mongodb://localhost:27017";
+
+const mongoURI = "mongodb+srv://u1903146:userpassword@cluster0.skrwbzy.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
