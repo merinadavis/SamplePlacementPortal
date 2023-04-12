@@ -17,20 +17,24 @@ class Login extends Component {
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value })
   }
-  onSubmit(e) {
+  onSubmit(e, role) {
     e.preventDefault()
 
     const user = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      role: role
     }
 
     login(user).then(res => {
       //console.log(res.error);
       if (res.token) {
-        //console.log(res.token);
-        this.props.history.push(`/profile`)
-      }
+        if (res.user.role === "admin"){
+          this.props.history.push('/admin-dash')
+        } else {
+          this.props.history.push(`/profile`)
+        }
+       }
       else if(res.error){
         //console.log(res.error);
         //alert(res.error);
@@ -72,8 +76,16 @@ class Login extends Component {
               <button
                 type="submit"
                 className="btn btn-lg btn-primary btn-block"
+                onClick={(e) => this.onSubmit(e, "student")}
               >
-                Sign in
+                Student Login
+              </button>
+              <button
+                type="submit"
+                className="btn btn-lg btn-primary btn-block"
+                onClick={(e) => this.onSubmit(e, "admin")}
+              >
+                Admin Login
               </button>
             </form>
           </div>

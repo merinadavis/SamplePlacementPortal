@@ -5,6 +5,7 @@ var https = require("https");
 var bodyParser = require("body-parser");
 var app = express();
 const mongoose = require("mongoose");
+const Admin = require('./models/Admin');
 var port = process.env.PORT || 5000;
 
 let compile_status = "";
@@ -33,8 +34,29 @@ const mongoURI = "mongodb+srv://u1903146:userpassword@cluster0.skrwbzy.mongodb.n
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.log(err));
+  .then(() => {
+    console.log("MongoDB Connected")
+
+    // //create admin
+    // const admin = new Admin({
+    //   username: 'admin',
+    //   email: 'admin123@gmail.com',
+    //   password: 'admin123',
+    //   role: 'admin'
+    // })
+
+    // //save admin to database
+    // admin.save()
+    //   .then(() => {
+    //     console.log('admin created');
+    //     mongoose.disconnect();
+    //   })
+    //   .catch((err) => {
+    //     console.error(err);
+    //     mongoose.disconnect();
+    //   });
+  })
+  .catch((err) => console.error(err));
 
 var Users = require("./routes/Users");
 var Companies = require("./routes/Companies");

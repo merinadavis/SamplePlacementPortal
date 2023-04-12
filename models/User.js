@@ -20,7 +20,13 @@ const UserSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  role: {
+    type: String,
+    required: true,
+    enum: ['student', 'admin'],
+    default: 'student'
   }
 })
 
-module.exports = User = mongoose.model('users', UserSchema)
+module.exports = User = mongoose.model('user', UserSchema)
